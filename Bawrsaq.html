@@ -5,6 +5,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="stylesheet" type="text/css" href="rating.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -45,6 +46,15 @@
         <button class="slider-next">Next</button>
     
     <p>鲍尔斯基（“用牛油煮的小麦面团”）是一种哈萨克甜甜圈，由未发酵或酵母面团制成。 有时会在面粉中加入干酪。 哈萨克斯坦的鲍尔斯基是如何准备的？ 首先用面粉、水或牛奶和鸡蛋揉成面团。 完成的面团被卷成捆并切成小块。 它们被制成丸子并在大量脂肪中油炸。 阅读更 </p>
+	
+	<ul id="list"></ul>
+ 
+    <input type="text" id="candidate" />
+    <button onclick="addItem()" class="buttonClass">
+    Add</button>
+    <button onclick="removeItem()" class="buttonClass">
+    Remove</button>
+	
     <br><br><br><br><br><br><h2>菜品评分</h2>
     <div class="rate">
     <input type="radio" id="star5" name="rate" value="5" />

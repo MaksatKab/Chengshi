@@ -132,3 +132,19 @@ padding: 0 0 5px 5px;
     left: 0;
     transition: all ease 1s;
 }
+
+#candidate {
+            border-radius: 20%;
+            border-color: #59e9ff;
+            box-sizing: border-box;
+        }
+         
+        .buttonClass {
+            border-radius: 20%;
+            border-color: #59e9ff;
+            border-style: inherit;
+        }
+         
+        button:hover {
+            background-color: #59e9ff;
+        }

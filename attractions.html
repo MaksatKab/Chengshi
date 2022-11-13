@@ -4,6 +4,7 @@
 <title>阿斯塔纳</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -38,6 +39,14 @@
 	<h2>纪念碑“哥萨克伊莱</h2>
 	<img src="images/Monument.jpg" id="Img3" />
     <p>纪念碑位于独立广场。 这是一座91米高的白色石碑，上面刻有神鸟萨姆鲁克的形象。 这个规模不是偶然选择的，因为哈萨克斯坦是在 1991 年成为一个独立国家的。 在靠近基地的地方，纪念碑的四面都有浅浮雕，描绘了现代哈萨克历史上的重要里程碑。 </p>
+	
+	<ul id="list"></ul>
+ 
+    <input type="text" id="candidate" />
+    <button onclick="addItem()" class="buttonClass">
+    Add</button>
+    <button onclick="removeItem()" class="buttonClass">
+    Remove</button>
 	
   </div>
   <div id="ftr"></div>

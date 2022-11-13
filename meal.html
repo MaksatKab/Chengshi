@@ -5,6 +5,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="stylesheet" type="text/css" href="rating.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -45,6 +46,15 @@
         <button class="slider-next">Next</button>
     
     <p>Sorpa有什么特点？ Sorpa (shurpa) 是一种由羊肉制成的哈萨克风味肉汤。 为了使肉汤透明和美味，将肉彻底清洗，倒入冷水并用小火煮1.5小时。 烹饪过程中去除多余的脂肪和泡沫。 将切碎的胡萝卜、洋葱、胡椒粒、月桂叶加入肉汤中。 在烹饪结束时，将 sorpa 加盐调味。 过滤液体并倒入深碗中。 Sorpa 配上一大块用香草装饰的肉。 </p>
+	
+	<ul id="list"></ul>
+ 
+    <input type="text" id="candidate" />
+    <button onclick="addItem()" class="buttonClass">
+    Add</button>
+    <button onclick="removeItem()" class="buttonClass">
+    Remove</button>
+	
     <br><br><br><br><h2>菜品评分</h2>
 	<div class="rate">
     <input type="radio" id="star5" name="rate" value="5" />

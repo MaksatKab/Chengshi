@@ -5,6 +5,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="stylesheet" type="text/css" href="rating.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -45,7 +46,16 @@
         <button class="slider-next">Next</button>
     
     <p>卡兹是一种自制的马肉香肠，在超市里是找不到的。它被认为是一种真正的美味佳肴，并以不同的形式制备 - 煮熟，煮熟，干腌。哈萨克家庭主妇是怎么做哈萨克人的？准备好的马肠里充满了脂肪和肋骨上的肉块。给肉加盐，加入大蒜，黑胡椒。有时会将整块肋骨添加到香肠中。根据速溶食谱，卡兹至少煮两个小时，冷却后食用。 </p>
-    <br><br><br><h2>菜品评分</h2>
+    
+	<ul id="list"></ul>
+ 
+    <input type="text" id="candidate" />
+    <button onclick="addItem()" class="buttonClass">
+    Add</button>
+    <button onclick="removeItem()" class="buttonClass">
+    Remove</button>
+	
+	<br><br><br><h2>菜品评分</h2>
     <div class="rate">
     <input type="radio" id="star5" name="rate" value="5" />
     <label for="star5" title="text">5 stars</label>

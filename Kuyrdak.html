@@ -5,6 +5,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="stylesheet" type="text/css" href="rating.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -45,6 +46,16 @@
         <button class="slider-next">Next</button>
     
     <p>哈萨克菜 kuyrdak 的受欢迎程度如何？ 哈萨克人喜欢不同的肉类菜肴。 最受欢迎的是 kuyrdak - 一种由羊肝、肾脏、心脏、肺和肥尾脂肪制成的热脂肪烤肉。 将肉肝切成小块，用肥尾脂肪和洋葱一起炒至嫩，加盐和胡椒粉。 油炸结束前，加入土豆和少许肉汤，炖煮，与蔬菜一起食用。 </p>
+	
+	<ul id="list"></ul>
+ 
+    <input type="text" id="candidate" />
+    <button onclick="addItem()" class="buttonClass">
+    Add</button>
+    <button onclick="removeItem()" class="buttonClass">
+    Remove</button>
+	
+	
     <br><br><br><br><br><h2>菜品评分</h2>
     <div class="rate">
     <input type="radio" id="star5" name="rate" value="5" />
