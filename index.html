@@ -49,15 +49,16 @@
   <div id="ftr">马克萨特 Maksat</div>
 </div>
 
-	<script type="text/javascript">
+	<script type="text/jscript">
 
-	let addBtn = document.getElementById("add");
-	addBtn.addEventListener("click", function() {
+	let addButtonn = document.getElementById("add");
+	addButtonn.addEventListener("click", function() {
 	var item = document.getElementById("item").value;
 	var text = document.createTextNode(item);
-	var li = document.createElement('li');
 	var btn = document.createElement("button");
-	btn.className = "button1";
+	var li = document.createElement('li');
+	
+	btn.className = "button2";
 	btn.textContent = "X";
 	li.appendChild(text);
 	li.appendChild(btn);
