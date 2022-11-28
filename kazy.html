@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="stylesheet" type="text/css" href="rating.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="script.js"></script>
 </head>
 <body>
 
@@ -49,11 +50,6 @@
     
 	<ul id="list"></ul>
  
-    <input type="text" id="candidate" />
-    <button onclick="addItem()" class="buttonClass">
-    Add</button>
-    <button onclick="removeItem()" class="buttonClass">
-    Remove</button>
 	
 	<br><br><br><h2>菜品评分</h2>
     <div class="rate">
@@ -71,6 +67,27 @@
   </div>
   <div id="ftr"></div>
 </div>
-<script src="script.js"></script>
+
+<script type="text/jscript">
+
+	let addButtonn = document.getElementById("add");
+	addButtonn.addEventListener("click", function() {
+	var item = document.getElementById("item").value;
+	var text = document.createTextNode(item);
+	var btn = document.createElement("button");
+	var li = document.createElement('li');
+	
+	btn.className = "button2";
+	btn.textContent = "X";
+	li.appendChild(text);
+	li.appendChild(btn);
+	document.getElementById('list').appendChild(li);
+	btn.addEventListener('click', function() {
+		this.parentElement.remove();
+  })
+})
+
+</script>
+
 </body>
 </html>
