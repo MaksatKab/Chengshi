@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>卡兹</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="rating.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</head>
+<body>
+
+<div id="outer">
+
+  <div id="hdr">
+    <h1>阿斯塔纳</h1>
+  </div>
+  
+  <div id="nav">
+  
+    <h2>内容</h2>
+    <ul>
+	
+      <li><a href="index.html">页面</a></li>
+	  <li><a href="attractions.html">景点</a></li>
+      <li><a href="meal.html">菜肴</a></li>
+      <li><a href="Asyp.html">Asyp</a></li>
+      <li><a href="Beshparmak.html">贝什巴尔马克</a></li>
+      <li><a href="Kuyrdak.html">Kuyrdak</a></li>
+      <li><a href="Bawrsaq.html">鲍尔斯基</a></li>
+      <li><a href="kazy.html">卡兹</a></li>
+	  
+    </ul>
+  </div>
+  <div id="cont">
+  
+    <h2>卡兹</h2>
+	<div class="slider">
+            <div class="slider-line">
+                <img src="images/kazy.jpg" alt="" />
+                <img src="images/kazy2.jpg" alt="" />
+                <img src="images/kazy3.jpg" alt="" />
+				<img src="images/kazy4.jpg" alt="" />
+            </div>
+        </div>
+        <button class="slider-prev">Prev</button>
+        <button class="slider-next">Next</button>
+    
+    <p>卡兹是一种自制的马肉香肠，在超市里是找不到的。它被认为是一种真正的美味佳肴，并以不同的形式制备 - 煮熟，煮熟，干腌。哈萨克家庭主妇是怎么做哈萨克人的？准备好的马肠里充满了脂肪和肋骨上的肉块。给肉加盐，加入大蒜，黑胡椒。有时会将整块肋骨添加到香肠中。根据速溶食谱，卡兹至少煮两个小时，冷却后食用。 </p>
+    
+	<ul id="list"></ul>
+ 
+	
+	<br><br><br><h2>菜品评分</h2>
+    <div class="rate">
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">1 star</label>
+  </div>
+  </div>
+  <div id="ftr"></div>
+</div>
+
+<script type="text/jscript">
+
+	let addButtonn = document.getElementById("add");
+	addButtonn.addEventListener("click", function() {
+	var item = document.getElementById("item").value;
+	var text = document.createTextNode(item);
+	var btn = document.createElement("button");
+	var li = document.createElement('li');
+	
+	btn.className = "button2";
+	btn.textContent = "X";
+	li.appendChild(text);
+	li.appendChild(btn);
+	document.getElementById('list').appendChild(li);
+	btn.addEventListener('click', function() {
+		this.parentElement.remove();
+  })
+})
+
+</script>
+
+</body>
+</html>
