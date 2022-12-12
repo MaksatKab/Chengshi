@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="script.js"></script>
+<script src="js/login_cookie.js"></script>
 </head>
 <body>
 
@@ -68,16 +69,6 @@
 		this.parentElement.remove();
   })
 })
-
-	let cookieStr =document.cookie;
-        console.log('manage',cookieStr);
-		
-	function removeCookie(tabs) {
-	let removing = browser.cookies.remove({
-		url: tabs[0].url,
-		name: "username"
-		});
-	}
 
 </script>
 
