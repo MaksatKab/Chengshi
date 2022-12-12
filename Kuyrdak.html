@@ -28,6 +28,9 @@
       <li><a href="Kuyrdak.html">Kuyrdak</a></li>
       <li><a href="Bawrsaq.html">鲍尔斯基</a></li>
       <li><a href="kazy.html">卡兹</a></li>
+	  <li id="list"></ul>
+	  <input id="item" class="txtbox">
+    <button id="add" class="button">添加</button>
 	  
     </ul>
   </div>
@@ -48,12 +51,6 @@
     <p>哈萨克菜 kuyrdak 的受欢迎程度如何？ 哈萨克人喜欢不同的肉类菜肴。 最受欢迎的是 kuyrdak - 一种由羊肝、肾脏、心脏、肺和肥尾脂肪制成的热脂肪烤肉。 将肉肝切成小块，用肥尾脂肪和洋葱一起炒至嫩，加盐和胡椒粉。 油炸结束前，加入土豆和少许肉汤，炖煮，与蔬菜一起食用。 </p>
 	
 	<ul id="list"></ul>
- 
-    <input type="text" id="candidate" />
-    <button onclick="addItem()" class="buttonClass">
-    Add</button>
-    <button onclick="removeItem()" class="buttonClass">
-    Remove</button>
 	
 	
     <br><br><br><br><br><h2>菜品评分</h2>
@@ -73,5 +70,23 @@
   <div id="ftr"></div>
 </div>
 <script src="script.js"></script>
+<script type="text/jscript">
+
+	let addButtonn = document.getElementById("add");
+	addButtonn.addEventListener("click", function() {
+	var item = document.getElementById("item").value;
+	var text = document.createTextNode(item);
+	var btn = document.createElement("button");
+	var li = document.createElement('li');
+	
+	btn.className = "button2";
+	btn.textContent = "X";
+	li.appendChild(text);
+	li.appendChild(btn);
+	document.getElementById('list').appendChild(li);
+	btn.addEventListener('click', function() {
+		this.parentElement.remove();
+  })
+})
 </body>
 </html>

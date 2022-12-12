@@ -28,7 +28,9 @@
       <li><a href="Kuyrdak.html">Kuyrdak</a></li>
       <li><a href="Bawrsaq.html">鲍尔斯基</a></li>
       <li><a href="kazy.html">卡兹</a></li>
-	  
+	  <li id="list"></ul>
+	  <input id="item" class="txtbox">
+    <button id="add" class="button">添加</button>
     </ul>
   </div>
   <div id="cont">
@@ -49,11 +51,6 @@
 	
 	<ul id="list"></ul>
  
-    <input type="text" id="candidate" />
-    <button onclick="addItem()" class="buttonClass">
-    Add</button>
-    <button onclick="removeItem()" class="buttonClass">
-    Remove</button>
 	
     <br><br><br><br><br><h2>菜品评分</h2>
     <div class="rate">
@@ -72,5 +69,25 @@
   <div id="ftr"></div>
 </div>
 <script src="script.js"></script>
+<script type="text/jscript">
+
+	let addButtonn = document.getElementById("add");
+	addButtonn.addEventListener("click", function() {
+	var item = document.getElementById("item").value;
+	var text = document.createTextNode(item);
+	var btn = document.createElement("button");
+	var li = document.createElement('li');
+	
+	btn.className = "button2";
+	btn.textContent = "X";
+	li.appendChild(text);
+	li.appendChild(btn);
+	document.getElementById('list').appendChild(li);
+	btn.addEventListener('click', function() {
+		this.parentElement.remove();
+  })
+})
+
+</script>
 </body>
 </html>
