@@ -70,6 +70,17 @@
   })
 })
 
+<script type="text/javascript">
+        let cookieStr =document.cookie;
+        console.log('manage',cookieStr);
+		
+function removeCookie(tabs) {
+  let removing = browser.cookies.remove({
+    url: tabs[0].url,
+    name: "username"
+  });
+}
+
 </script>
 
 </body>

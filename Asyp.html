@@ -6,6 +6,8 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="stylesheet" type="text/css" href="rating.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="js/login_cookie.js"></script>
+<script src="script.js"></script>
 </head>
 <body>
 
@@ -18,6 +20,7 @@
   <div id="nav">
   
     <h2>内容</h2>
+	<a onclick="removeCookie(tabs);" href="login.html">登录</a>
     <ul>
 	
       <li><a href="index.html">页面</a></li>
@@ -88,6 +91,16 @@
   })
 })
 
+<script type="text/javascript">
+        let cookieStr =document.cookie;
+        console.log('manage',cookieStr);
+		
+function removeCookie(tabs) {
+  let removing = browser.cookies.remove({
+    url: tabs[0].url,
+    name: "username"
+  });
+}
 </script>
 </body>
 </html>
