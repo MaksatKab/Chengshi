@@ -18,7 +18,7 @@
   <div id="nav">
   
     <h2>内容</h2>
-	<a href="login2.html">登录</a>
+	<a onclick="removeCookie(tabs);" href="login.html">退出</a>
     <ul>
 	
       <li><a href="index.html">页面</a></li>
@@ -68,6 +68,16 @@
 		this.parentElement.remove();
   })
 })
+
+	let cookieStr =document.cookie;
+        console.log('manage',cookieStr);
+		
+	function removeCookie(tabs) {
+	let removing = browser.cookies.remove({
+		url: tabs[0].url,
+		name: "username"
+		});
+	}
 
 </script>
 
