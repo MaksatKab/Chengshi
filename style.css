@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 a:link {
 color: #59e9ff;
 
+}
+.span {
+    position: relative;
+    font-weight: bold;
+    left: 1%;
 }
 a:visited {
 
@@ -37,14 +43,15 @@ h2 {
  width: 75%;
  margin: auto;
  background: white;
+ border-bottom: 3px solid #14707A;
  }
 
-#hdr {
+#header {
  padding: 150px;
  background: #fff url(images/logo.jpg) no-repeat center;
  }
 
-#hdr h1 {
+#header h1 {
  color: #fff;
  background:#16baf5;
  font-size: 2em;
@@ -61,18 +68,13 @@ h2 {
  text-align: center;
  background: url(images/templatemo_slider.png) no-repeat bottom center;
  padding-bottom: 30px;
+
 }
 #nav ul {
  background: url(images/templatemo_slider.png) no-repeat top center;
  margin: 0;
  padding: 30px;
  list-style: none;
-}
-#nav li {
-	margin: 0;
-}
-#nav h2 {
-
 }
 
 #Img1
@@ -99,13 +101,21 @@ height: 190px;
 padding: 0 0 5px 5px;
 }
 
-#cont {
+#nav li {
+	margin: 0;
+}
+#nav h2 {
+
+}
+
+#container {
  float: left;
  width:820px;
  padding: 1.5em;
+ 
  }
 
-#ftr {
+#text {
  clear: both;
  color: #fff;
  background:#59e9ff;
@@ -150,3 +160,5 @@ padding: 0 0 5px 5px;
         button:hover {
             background-color: #59e9ff;
         }
+		
+  

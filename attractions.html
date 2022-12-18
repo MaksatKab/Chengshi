@@ -5,31 +5,34 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="sslider.js"></script>
 </head>
 <body>
 
 <div id="outer">
-  <div id="hdr">
+  <div id="header">
   
     <h1>阿斯塔纳</h1>
   </div>
   
   <div id="nav">
   
-    <h2>内容</h2>
+  <button class="button2" onclick="window.location.href='login.html'">登出</button>
+    
+	<h2>内容</h2>
     <ul>
 	
       <li><a href="index.html">页面</a></li>
       <li><a href="attractions.html">景点</a></li>
       <li><a href="meal.html">菜肴</a></li>
 	  <li id="list"></ul>
-	  <input id="item" class="txtbox">
-    <button id="add" class="button">添加</button>
+	  <input type="text" name="item" id="item">
+      <button>添加</button>
 	  
     </ul>
   </div>
   
-  <div id="cont">
+  <div id="container">
     
 	<h2>纪念碑“阿斯塔纳-拜特雷克”</h2>
     <img src="images/bayterek.jpg" id="Img3" />
@@ -47,27 +50,35 @@
  
 	
   </div>
-  <div id="ftr"></div>
+  <div id="text"></div>
 </div>
 
 	<script type="text/jscript">
 
-	let addButtonn = document.getElementById("add");
-	addButtonn.addEventListener("click", function() {
-	var item = document.getElementById("item").value;
-	var text = document.createTextNode(item);
-	var btn = document.createElement("button");
-	var li = document.createElement('li');
-	
-	btn.className = "button2";
-	btn.textContent = "X";
-	li.appendChild(text);
-	li.appendChild(btn);
-	document.getElementById('list').appendChild(li);
-	btn.addEventListener('click', function() {
-		this.parentElement.remove();
-  })
-})
+	const list = document.querySelector('ul');
+      const input = document.querySelector('input');
+      const button = document.querySelector('button');
+
+      button.addEventListener('click', () => {
+        const myItem = input.value;
+        input.value = '';
+
+        const listItem = document.createElement('li');
+        const listText = document.createElement('span');
+        const listBtn = document.createElement('button');
+
+        listItem.appendChild(listText);
+        listText.textContent = myItem;
+        listItem.appendChild(listBtn);
+        listBtn.textContent = 'X';
+        list.appendChild(listItem);
+
+        listBtn.addEventListener('click', () => {
+          list.removeChild(listItem);
+        });
+
+        input.focus();
+      });
 
 </script>
 </body>
